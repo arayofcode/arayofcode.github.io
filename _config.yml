@@ -28,7 +28,8 @@ sass:
 # Options
 
 # Replace this value and uncomment to enable Google Analytics tracking
-ga_analytics: G-4X6ZJWQB9
+# ga_analytics: G-4X6ZJWQB9
+ms_clarity_project: o7v6jg3p4w
 
 # Custom vars
 version: 3.0.0

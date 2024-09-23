@@ -18,8 +18,7 @@
     </footer>
   </div>
 
-  {% if site.ga_analytics %}
-  <!-- Google tag (gtag.js) -->
+  <!-- {% if site.ga_analytics %}
   <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.ga_analytics }}"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -28,7 +27,18 @@
 
     gtag('config', '{{ site.ga_analytics }}');
   </script>
+  {% endif %} -->
+
+  {% if site.ms_clarity_project %}
+  <script type="text/javascript">
+    (function (c, l, a, r, i, t, y) {
+      c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
+      t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
+      y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
+    })(window, document, "clarity", "script", "{{ site.ms_clarity_project }}");
+  </script>
   {% endif %}
+
 </body>
 
 </html>
