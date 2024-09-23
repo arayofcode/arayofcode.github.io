@@ -1,4 +1,6 @@
-- title: Blog
-  url: /archive
+- title: Home
+  link: /
 - title: About
   url: /about
+- title: Blog
+  url: /archive
