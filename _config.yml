@@ -30,6 +30,7 @@ sass:
 # Replace this value and uncomment to enable Google Analytics tracking
 # ga_analytics: G-4X6ZJWQB9
 ms_clarity_project: o7vq28z7o0
+cloudflare_token: 04c11e3f5f704a0a9e16ebe1797b7b86
 
 # Custom vars
 version: 3.0.0
