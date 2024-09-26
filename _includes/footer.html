@@ -1,6 +1,28 @@
 <footer class="footer">
-  <small>
-    &copy;
-    <time datetime="{{ site.time | date_to_xmlschema }}">{{ site.time | date: '%Y' }}</time>. All rights reserved.
-  </small>
+  <div class="social-links">
+    <ul>
+      {% if site.data.socials.github %}
+      <li>
+        <a href="https://github.com/{{ site.data.socials.github }}" target="_blank"><i class="bi bi-github"></i></a>
+      </li>
+      {% endif %}
+      {% if site.data.socials.twitter %}
+      <li>
+        <a href="https://x.com/{{ site.data.socials.twitter }}" target="_blank"><i class="bi bi-twitter-x"></i></a>
+      </li>
+      {% endif %}
+      {% if site.data.socials.linkedin %}
+      <li>
+        <a href="https://www.linkedin.com/in/{{ site.data.socials.linkedin }}" target="_blank"><i
+            class="bi bi-linkedin"></i></a>
+      </li>
+      {% endif %}
+      {% if site.data.socials.email %}
+      <li>
+        <a href="mailto:{{ site.data.socials.email }}" target="_blank" rel="noopener noreferrer"><i
+            class="bi bi-envelope"></i></a>
+      </li>
+      {% endif %}
+    </ul>
+  </div>
 </footer>

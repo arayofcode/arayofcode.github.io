@@ -33,31 +33,3 @@ title: Home
   <p>No posts yet. Check back soon!</p>
   {% endif %}
 </div>
-
-<div class="social-links">
-  <h2>Connect with me</h2>
-  <ul>
-    {% if site.data.socials.github %}
-    <li>
-      <a href="https://github.com/{{ site.data.socials.github }}" target="_blank"><i class="bi bi-github"></i></a>
-    </li>
-    {% endif %}
-    {% if site.data.socials.twitter %}
-    <li>
-      <a href="https://x.com/{{ site.data.socials.twitter }}" target="_blank"><i class="bi bi-twitter-x"></i></a>
-    </li>
-    {% endif %}
-    {% if site.data.socials.linkedin %}
-    <li>
-      <a href="https://www.linkedin.com/in/{{ site.data.socials.linkedin }}" target="_blank"><i
-          class="bi bi-linkedin"></i></a>
-    </li>
-    {% endif %}
-    {% if site.data.socials.email %}
-    <li>
-      <a href="mailto:{{ site.data.socials.email }}" target="_blank" rel="noopener noreferrer"><i
-          class="bi bi-envelope"></i></a>
-    </li>
-    {% endif %}
-  </ul>
-</div>
