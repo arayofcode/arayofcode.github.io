@@ -2,3 +2,14 @@ footer {
     margin-top: var(--spacer);
     margin-bottom: var(--spacer);
 }
+
+.social-links ul {
+    display: flex;
+    justify-content: center;
+}
+
+.social-links ul li {
+    font-size: 2rem;
+    margin-left: 1rem;
+    list-style-type: none;
+}
