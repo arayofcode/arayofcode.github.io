@@ -9,10 +9,10 @@
   --gray-700: #495057;
   --gray-800: #343a40;
   --gray-900: #212529;
-  --dark-poole-001: hsl(200, 3%, 12%);
-  --dark-poole-002: hsl(0, 0%, 85%);
-  --dark-poole-link-color: rgba(255, 255, 255, 0.75);
-  --dark-poole-link-hover: #fff;
+  --dark-001: hsl(200, 3%, 12%);
+  --dark-002: hsl(0, 0%, 85%);
+  --dark-link-color: rgba(255, 255, 255, 0.75);
+  --dark-link-hover: #fff;
 
   --red: #fa5252;
   --pink: #e64980;
@@ -35,50 +35,48 @@
     "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --body-font-size: 20px;
   --body-line-height: 1.5;
-  --body-color: var(--gray-700);
-  --body-bg: #fff;
 
-  --link-color: var(--blue);
-  --link-hover-color: #1c7ed6;
-
-  --heading-color: var(--gray-900);
-
-  --border-color: var(--gray-300);
   --border-radius: 0.25rem;
 
   --code-font: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
     "Courier New", monospace;
   --code-color: var(--grape);
-  --code-bg: var(--gray-000);
 
   --spacer: 1rem;
   --spacer-2: calc(var(--spacer) * 1.5);
   --spacer-3: calc(var(--spacer) * 3);
 }
 
+@mixin light-theme {
+  --body-color: var(--gray-700);
+  --body-bg: #fff;
+  --heading-color: var(--gray-900);
+  --link-color: var(--blue);
+  --link-hover-color: #1c7ed6;
+  --border-color: var(--gray-300);
+  --code-bg: var(--gray-000);
+}
+
+@mixin dark-theme {
+  --body-color: var(--dark-002);
+  --body-bg: var(--dark-001);
+  --heading-color: var(--dark-002);
+  --link-color: var(--dark-link-color);
+  --link-hover-color: var(--dark-link-hover);
+  --border-color: rgba(255, 255, 255, 0.15);
+  --code-bg: var(--gray-900);
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
-    --body-color: var(--gray-300);
-    --body-bg: var(--gray-800);
-
-    --heading-color: #fff;
-
-    --link-color: var(--blue-300);
-    --link-hover-color: var(--blue-400);
-
-    --border-color: rgba(255, 255, 255, 0.15);
-
-    --code-bg: var(--gray-900);
+    @include dark-theme;
   }
 }
 
-// Dark Poole theme
-[data-theme="dark-poole"] {
-  --body-color: var(--dark-poole-002);
-  --body-bg: var(--dark-poole-001);
-  --heading-color: var(--dark-poole-002);
-  --link-color: var(--dark-poole-link-color);
-  --link-hover-color: var(--dark-poole-link-hover);
-  --border-color: rgba(255, 255, 255, 0.15);
-  --code-bg: var(--gray-900);
+[data-theme="dark"] {
+  @include dark-theme;
+}
+
+[data-theme="light"] {
+  @include light-theme;
 }

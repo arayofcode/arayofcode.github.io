@@ -1,33 +1,15 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark-poole">
+<html lang="en">
 {% include head.html %}
 
-<body>
-  <div class="container content">
-    {% include nav.html %}
+<body class="container content">
+  {% include nav.html %}
 
-    <main>
-      {{ content }}
-    </main>
+  <main>
+    {{ content }}
+  </main>
 
-    <footer class="footer">
-      <small>
-        &copy;
-        <time datetime="{{ site.time | date_to_xmlschema }}">{{ site.time | date: '%Y' }}</time>. All rights reserved.
-      </small>
-    </footer>
-  </div>
-
-  <!-- {% if site.ga_analytics %}
-  <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.ga_analytics }}"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-
-    gtag('config', '{{ site.ga_analytics }}');
-  </script>
-  {% endif %} -->
+  {% include footer.html %}
 
   {% if site.ms_clarity_project %}
   <script type="text/javascript">
@@ -39,8 +21,10 @@
   </script>
   {% endif %}
 
-<script defer src='https://static.cloudflareinsights.com/beacon.min.js'
-  data-cf-beacon='{"token": "{{ site.cloudflare_token }}"}'></script>
+  {% if site.cloudflare_token %}
+  <script defer src='https://static.cloudflareinsights.com/beacon.min.js'
+    data-cf-beacon='{"token": "{{ site.cloudflare_token }}"}'></script>
+  {% endif %}
 </body>
 
 </html>
