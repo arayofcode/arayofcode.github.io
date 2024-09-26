@@ -14,7 +14,10 @@ body {
   color: var(--body-color);
   background-color: var(--body-bg);
   -webkit-text-size-adjust: 100%;
-      -ms-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 // No `:visited` state is required by default (browsers will use `a`)
@@ -67,4 +70,18 @@ mark {
   padding: .15rem;
   background-color: var(--yellow-100);
   border-radius: .125rem;
+}
+
+.nav {
+  float: right;
+  line-height: 1.25rem;
+  word-spacing: 1rem;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+footer {
+  flex-shrink: 0;
 }
