@@ -2,14 +2,16 @@
 <html lang="en">
 {% include head.html %}
 
-<body class="container content">
-  {% include nav.html %}
+<body>
+  <div class="container content">
+    {% include header.html %}
 
-  <main>
-    {{ content }}
-  </main>
+    <main>
+      {{ content }}
+    </main>
 
-  {% include footer.html %}
+    {% include footer.html %}
+  </div>
 
   {% if site.ms_clarity_project %}
   <script type="text/javascript">
