@@ -9,10 +9,7 @@
 
   padding-top: var(--spacer);
   padding-bottom: var(--spacer);
-  
   margin-bottom: var(--spacer-2);
-  
-  line-height: 1.25rem;
 }
 
 .masthead-title {
@@ -28,6 +25,7 @@
 }
 
 .nav {
+  line-height: 1.25rem;
   list-style: var(--spacer);
   display: flex;
   gap: 1rem;
