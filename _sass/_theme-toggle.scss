@@ -1,0 +1,87 @@
+.sun-and-moon {
+    &> :is(.moon, .sun, .sun-beams) {
+        transform-origin: center;
+    }
+
+    &> :is(.moon, .sun) {
+        fill: var(--icon-fill);
+    }
+
+    &>.sun-beams {
+        stroke: var(--icon-fill);
+        stroke-width: 2px;
+    }
+}
+
+.theme-toggle {
+    &:is(:hover, :focus-visible) {
+        &>.sun-and-moon {
+            &> :is(.moon, .sun) {
+                fill: var(--icon-fill-hover);
+            }
+
+            &>.sun-beams {
+                stroke: var(--icon-fill-hover);
+            }
+        }
+    }
+}
+
+[data-theme="dark"] .sun-and-moon {
+    &>.sun {
+        transform: scale(1.75);
+    }
+
+    &>.sun-beams {
+        opacity: 0;
+    }
+
+    &>.moon>circle {
+        transform: translateX(-7px);
+
+        @supports (cx: 1) {
+            cx: 17;
+            transform: translateX(0);
+        }
+    }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .sun-and-moon {
+        &>.sun {
+            transition: transform .5s var(--ease-elastic-3);
+        }
+
+        &>.sun-beams {
+            transition:
+                transform .5s var(--ease-elastic-4),
+                opacity .5s var(--ease-3);
+        }
+
+        .moon>circle {
+            transition: transform .25s var(--ease-out-5);
+
+            @supports (cx: 1) {
+                transition: cx .25s var(--ease-out-5);
+            }
+        }
+    }
+
+    [data-theme="dark"] .sun-and-moon {
+        &>.sun {
+            transition-timing-function: var(--ease-3);
+            transition-duration: .25s;
+            transform: scale(1.75);
+        }
+
+        &>.sun-beams {
+            transition-duration: .15s;
+            transform: rotateZ(-25deg);
+        }
+
+        &>.moon>circle {
+            transition-duration: .5s;
+            transition-delay: .25s;
+        }
+    }
+}

@@ -45,6 +45,11 @@
   --spacer: 1rem;
   --spacer-2: calc(var(--spacer) * 1.5);
   --spacer-3: calc(var(--spacer) * 3);
+
+  --icon-fill: #000;
+  --icon-fill-hover: #333;
+  --sun-fill: #000;
+  --moon-fill: #fff;
 }
 
 @mixin light-theme {
@@ -55,6 +60,10 @@
   --link-hover-color: #1c7ed6;
   --border-color: var(--gray-300);
   --code-bg: var(--gray-000);
+  --icon-fill: var(--gray-700);
+  --icon-fill-hover: var(--gray-900);
+  --sun-fill: var(--yellow);
+  --moon-fill: var(--gray-400);
 }
 
 @mixin dark-theme {
@@ -65,6 +74,12 @@
   --link-hover-color: var(--dark-link-hover);
   --border-color: rgba(255, 255, 255, 0.15);
   --code-bg: var(--gray-900);
+  --icon-fill: #fff;
+  --icon-fill-hover: #ccc;
+  --icon-fill: #fff;
+  --icon-fill-hover: #ccc;
+  --sun-fill: var(--yellow);
+  --moon-fill: var(--gray-200);
 }
 
 @media (prefers-color-scheme: dark) {
