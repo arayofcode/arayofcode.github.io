@@ -3,14 +3,19 @@
 // Super small header above the content for site name and short description.
 
 .masthead {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
   padding-top: var(--spacer);
   padding-bottom: var(--spacer);
+  
   margin-bottom: var(--spacer-2);
+  
+  line-height: 1.25rem;
 }
 
 .masthead-title {
-  margin-bottom: 0;
-
   a {
     color: inherit;
     text-decoration: none;
@@ -23,7 +28,7 @@
 }
 
 .nav {
-  float: right;
-  line-height: 1.25rem;
-  word-spacing: 1rem;
+  list-style: var(--spacer);
+  display: flex;
+  gap: 1rem;
 }
