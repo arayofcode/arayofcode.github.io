@@ -1,9 +1,8 @@
 ---
 layout: post
 title: Concurrency Limits and Performance
+subtitle: Lessons learnt from building a system with unbound concurrency
 ---
-
-## Lessons learnt from building a system with unbound concurrency
 
 I read [this blog](https://netflixtechblog.medium.com/performance-under-load-3e6fa9a60581) by Netflix Engineering team this morning, which reminded me of a challenge I faced on, working on a project in my first role. The blog shares Netflix's approach to managing system performance and availability under heavy workload through adaptive concurrency limits. Their algorithm dynamically adjusts the number of concurrent requests their system would handle, finding the right number that maximised their throughput while maintaining low latency. Reading the article helped me understand why my application failed, and thought it would be good to share what went wrong, and how we could've improved it.
 
