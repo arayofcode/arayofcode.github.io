@@ -1,15 +1,54 @@
 footer {
-    margin-top: var(--spacer);
-    margin-bottom: var(--spacer);
+  margin-top: var(--spacer);
+  margin-bottom: var(--spacer);
 }
 
 .social-links ul {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 .social-links ul li {
-    font-size: 2rem;
-    margin-left: 1rem;
-    list-style-type: none;
+  margin: 0 1rem;
+  list-style-type: none;
+}
+
+.social-icon {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  transition: transform 0.2s ease-in-out;
+}
+
+.github-icon {
+  transform: scale(1.2);
+}
+
+.github-icon:hover {
+  transform: scale(1.5);
+}
+
+.linkedin-icon {
+  transform: scale(1.8);
+}
+
+.linkedin-icon:hover {
+  transform: scale(2.3);
+}
+
+.email-icon,
+.bluesky-icon {
+  transform: scale(1.5);
+}
+
+.email-icon:hover {
+  transform: scale(2);
+}
+
+.bluesky-icon:hover {
+  transform: scale(2);
+}
+
+.twitter-icon:hover {
+  transform: scale(1.5);
 }

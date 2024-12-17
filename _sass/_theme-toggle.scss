@@ -86,3 +86,7 @@
         }
     }
 }
+
+[data-theme="dark"] .social-icon {
+  filter: invert(1);
+}
