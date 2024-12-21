@@ -74,7 +74,7 @@ In `_config.yml`, add this line:
 paginate_path: "/baseurl/page:num/"
 ```
 
-In `archive.md`, add `{{ site.baseurl }}` before `{{ post.url }}`
+In `posts.md`, add `{{ site.baseurl }}` before `{{ post.url }}`
 
 ```html
 <!-- Add "{{ site.baseurl }}" -->
@@ -107,8 +107,8 @@ You can easily customize the navbar by tweaking the `_config.yml` file. Simply c
 
 ```yaml
 nav:
-  - title: Blog
-    url: /archive
+  - title: Posts
+    url: /posts
 
   - title: About
     url: /about
