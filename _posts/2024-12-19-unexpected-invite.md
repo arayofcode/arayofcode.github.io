@@ -1,7 +1,7 @@
 ---
 layout: post
 title: An Unexpected Invitation
-subtitle: Experiences from Joining a Round Table ad-hoc
+subtitle: Joining a Round Table ad-hoc
 ---
 
 Last Friday, December 13, 2024, I attended the Hyderabad PostgreSQL UserGroup Meetup, expecting a regular attendee experience. However, the host, [Hari](https://www.linkedin.com/in/hari-kiran-pg), surprised me with an unplanned invite to join the round table as one of the panelists.
